@@ -7,8 +7,14 @@ import static org.junit.Assert.*;
 
 public class CheckPrimeNumberTest {
     @Test
-    public void when5() {
-        boolean rsl = CheckPrimeNumber.check(5);
+    public void when1() {
+        boolean rsl = CheckPrimeNumber.check(1);
+        assertThat(rsl, is(false));
+    }
+
+    @Test
+    public void when2() {
+        boolean rsl = CheckPrimeNumber.check(2);
         assertThat(rsl, is(true));
     }
 
@@ -19,14 +25,14 @@ public class CheckPrimeNumberTest {
     }
 
     @Test
-    public void when1() {
-        boolean rsl = CheckPrimeNumber.check(1);
-        assertThat(rsl, is(false));
+    public void when5() {
+        boolean rsl = CheckPrimeNumber.check(5);
+        assertThat(rsl, is(true));
     }
 
     @Test
-    public void when193() {
-        boolean rsl = CheckPrimeNumber.check(193);
+    public void when11() {
+        boolean rsl = CheckPrimeNumber.check(11);
         assertThat(rsl, is(true));
     }
 }
