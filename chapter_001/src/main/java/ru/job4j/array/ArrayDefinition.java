@@ -7,7 +7,7 @@ public class ArrayDefinition {
         float [] prices = new float [40];
 
         String [] names = new String [4];
-        names[0] = "Ivan Groshev";
+        names[0] = "Ivan Groshnev";
         names[1] = "Anna Miasnikov";
         names[2] = "Denis Konev";
         names[3] = "Ksenya Balkina";
