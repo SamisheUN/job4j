@@ -6,7 +6,7 @@ public class ArrayLoop {
 
         for (int index = 0; index < 5; index++) {
             numbers[index] = index * 2 + 3;
-            System.out.println("Номер элемента:" + index + " = " + numbers[index]);
+            System.out.println("Номер элемента " + index + " = " + numbers[index]);
         }
 
     }
