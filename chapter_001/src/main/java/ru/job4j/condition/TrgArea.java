@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 //1. Реализовать методы area. Дописать туда вычисления площади по формуле Герона.
 public class TrgArea {
-    public static double area (double a, double b, double c) {
+    public static double area(double a, double b, double c) {
         double halfPerimeter = (a + b + c) / 2;
         return Math.sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
     }

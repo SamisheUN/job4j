@@ -8,19 +8,21 @@ package ru.job4j.converter;
 
 public class Converter {
 
-    public static int rubleToEuro (int value) {
+    public static int rubleToEuro(int value) {
         return value / 70;
     }
 
-    public static int rubleToDollar (int value) {
+    public static int rubleToDollar(int value) {
         return value / 60;
     }
 
-    public static int euroToRuble (int value) {
+    public static int euroToRuble(int value) {
         return value * 70;
     }
 
-    public static int dollarToRuble (int value) { return value * 60; }
+    public static int dollarToRuble(int value) {
+        return value * 60;
+    }
 
     public static void main(String[] args) {
 
@@ -31,25 +33,25 @@ public class Converter {
         int outRtoE = rubleToEuro(in);
         boolean passedRtoE = expectedRtoE == outRtoE;
         int euro  = rubleToEuro(140);
-        System.out.println ("140 rubles are " + euro + " euro. Test result = " + passedRtoE);
+        System.out.println("140 rubles are " + euro + " euro. Test result = " + passedRtoE);
 
         int expectedRtoD = 2;
         int outRtoD = rubleToDollar(in);
         boolean passedRtoD = expectedRtoD == outRtoD;
         int dollar = rubleToDollar(140);
-        System.out.println ("140 rubles are " + dollar + " dollars. Test result = " + passedRtoD);
+        System.out.println("140 rubles are " + dollar + " dollars. Test result = " + passedRtoD);
 
         int expectedDtoR = 8400;
         int outDtoR = dollarToRuble(in);
         boolean passedDtoR = expectedDtoR == outDtoR;
-        int rubleD = dollarToRuble (140);
-        System.out.println ("140 dollars are " + rubleD + " rubles. Test result = " + passedDtoR);
+        int rubleD = dollarToRuble(140);
+        System.out.println("140 dollars are " + rubleD + " rubles. Test result = " + passedDtoR);
 
         int expectedEtoR = 9800;
         int outEtoR = euroToRuble(in);
         boolean passedEtoR = expectedEtoR == outEtoR;
-        int rubleE = euroToRuble (140);
-        System.out.println ("140 euro are " + rubleE + " rubles. Test result = " + passedEtoR);
+        int rubleE = euroToRuble(140);
+        System.out.println("140 euro are " + rubleE + " rubles. Test result = " + passedEtoR);
     }
 
 }

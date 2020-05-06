@@ -4,10 +4,11 @@ public class Factorial {
     public static int calc(int n) {
         int result = 0;
      for (int index = 1; index <= n; index++) {
-         if (index == 1) {result = 1;}
-         else {
+     if (index == 1) {
+         result = 1;
+     } else {
              result = result * index;
-         }
+     }
      }
         return result;
     }

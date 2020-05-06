@@ -15,14 +15,14 @@ public class CounterTest {
     }
 
      @Test
-     public void WhenSumOnetoTen() {
-     int Boo = Counter.sumByEven(10, 12);
+     public void whenSumOnetoTen() {
+     int boo = Counter.sumByEven(10, 12);
      int expected = 24;
     }
 
     @Test
-    public void WhenSumOnetoFive() {
-        int Boo = Counter.sumByEven(1, 5);
+    public void whenSumOnetoFive() {
+        int boo = Counter.sumByEven(1, 5);
         int expected = 6;
     }
 }
