@@ -23,7 +23,7 @@ public class FactorialTest {
     @Test
     public void whenCalculateFactorialForZero() {
         int rsl = Factorial.calc(0); //напишите здесь тест, проверяющий, что факториал для числа 0 равен 1.
-        int expected = 0;
+        int expected = 1;
         assertThat(rsl, Matchers.is(expected));
     }
 
