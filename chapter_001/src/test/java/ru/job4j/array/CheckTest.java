@@ -20,14 +20,14 @@ public class CheckTest {
     }
 
     @Test
-    public void whenMassiveTwo() {
+    public void whenMassiveTwoDifferent() {
         boolean[] input = new boolean[] {true, false};
         boolean result = Check.mono(input);
         assertThat(result, is(false));
     }
 
     @Test
-    public void whenMassiveTwoF() {
+    public void whenMassiveTwoEqual() {
         boolean[] input = new boolean[] {true, true};
         boolean result = Check.mono(input);
         assertThat(result, is(true));
