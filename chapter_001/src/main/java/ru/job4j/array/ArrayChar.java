@@ -13,6 +13,7 @@ public class ArrayChar {
             //т.к. условие не исключает наличие в word[] дополнительных ячеек
             if (pref[index] != word[index]) {
                 result = false;
+                break;
             }
         }
         return result;
