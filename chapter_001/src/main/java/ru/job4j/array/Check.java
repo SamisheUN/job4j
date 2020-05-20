@@ -8,6 +8,7 @@ public class Check {
         for (boolean index : data) {
             if (data[0] != index) {
                 result = false;
+                break;
             }
         }
         return result;
