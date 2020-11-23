@@ -3,14 +3,24 @@ package ru.job4j.condition;
 2. Доработайте метод main Добавьте в него вызов метода distance с различными параметрами точек.
 */
 public class Point {
+    private int x;
+    private int y;
 
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    public double distance(Point that) {
+        return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(5, 10, 15, 20);
-        System.out.println("result (5, 10) to (15, 20)" + result);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+
+        double dist = a.distance(b);
+        System.out.println(dist);
     }
 
 }
