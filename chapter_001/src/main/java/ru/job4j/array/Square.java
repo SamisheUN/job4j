@@ -7,7 +7,6 @@ public class Square {
 
             rst[index] = (int) Math.pow(index, 2);
         }
-        // заполнить массив через цикл элементами от 0 до bound , возведенными в квадрат
         return rst;
     }
 

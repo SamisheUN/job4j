@@ -1,12 +1,11 @@
 package ru.job4j.array;
+
 import org.junit.Test;
-import org.testng.IExpectedExceptionsHolder;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class BubbleSortTest {
-    //напишите здесь тест, проверяющий сортировку массива из 10 элементов методом пузырька, например {1, 5, 4, 2, 3, 1, 7, 8, 0, 5}.
     @Test
     public void whenSortArrayWithTenElementsThenSortedArray() {
         int[] array = {91, 35, 584, 732, 113, 221, 37, 18, 230, 555};
@@ -23,5 +22,5 @@ public class BubbleSortTest {
         assertThat(result, is(expect));
     }
 
-    }
+}
 
