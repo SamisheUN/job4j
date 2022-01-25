@@ -73,4 +73,23 @@ public class EvenIteratorTest {
         assertThat(it.next(), is(6));
         assertThat(it.hasNext(), is(false));
     }
+
+    @Test
+    public void whenFrstAndLastIsOdd() {
+        it = new EvenNumbersIterator(new int[]{1, 2, 4, 6, 1, 3});
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is(2));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is(4));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is(6));
+        assertThat(it.hasNext(), is(false));
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void whenOneAlone() {
+        it = new EvenNumbersIterator(new int[]{3});
+        assertThat(it.hasNext(), is(false));
+        it.next();
+    }
 }
