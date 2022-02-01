@@ -13,15 +13,9 @@ public class Generics {
         first.add(new Animal());
         second.add(new Predator());
         third.add(new Tiger());
-
-        /**
-         *  яваДок, чтобы бот на трекере не ругался на однострочные комментарии.
-         *
-         *  Закомментированы, т.к. не были Object:
-         *gen.printObject(first);
-         *gen.printObject(second);
-         *gen.printObject(third);
-         */
+        gen.printObject(first);
+        gen.printObject(second);
+        gen.printObject(third);
         System.out.println();
 
         /**
