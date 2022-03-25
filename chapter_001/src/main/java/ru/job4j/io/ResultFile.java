@@ -12,7 +12,7 @@ public class ResultFile {
         try (FileOutputStream out = new FileOutputStream("result.txt")) {
             for (int[] row : matrix) {
                 for (int val : row) {
-                    out.write(Integer.toString(val).getBytes());
+                    out.write((val + " ").getBytes());
                 }
                 out.write(System.lineSeparator().getBytes());
             }
