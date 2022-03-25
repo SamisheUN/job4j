@@ -30,7 +30,7 @@ public class LogFilter {
         try (BufferedReader in = new BufferedReader(new FileReader("log.txt"))) {
             for (String line = in.readLine(); line != null; line = in.readLine()) {
                 arr = line.split(" ");
-                if (arr[arr.length - 2].equals("404") && isNumber(arr[arr.length - 1])) {
+                if ("404".equals(arr[arr.length - 2]) && isNumber(arr[arr.length - 1])) {
                     rsl.add(line + System.lineSeparator());
                 }
             }
