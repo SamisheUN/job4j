@@ -10,7 +10,9 @@ public class LogFilter {
                 new BufferedOutputStream(
                         new FileOutputStream(file)
                 ))) {
-            out.println(log);
+            for (String line : log) {
+                out.println(line);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,11 +39,11 @@ public class LogFilter {
     public List<String> filter(String file) {
         List<String> rsl = new ArrayList<>();
         String[] arr;
-        try (BufferedReader in = new BufferedReader(new FileReader("log.txt"))) {
+        try (BufferedReader in = new BufferedReader(new FileReader(file))) {
             for (String line = in.readLine(); line != null; line = in.readLine()) {
                 arr = line.split(" ");
                 if ("404".equals(arr[arr.length - 2]) && isNumber(arr[arr.length - 1])) {
-                    rsl.add(line + System.lineSeparator());
+                    rsl.add(line);
                 }
             }
         } catch (Exception e) {
